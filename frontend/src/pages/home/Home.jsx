@@ -47,7 +47,7 @@ const Home = () => {
 				top-0 sm:top-auto 
 				left-0 sm:left-auto 
 				h-full sm:h-auto 
-				w-64 sm:w-auto 
+				w-80 sm:w-auto 
 				z-50 sm:z-auto 
 				transition-transform duration-300 ease-in-out
 				bg-gray-900/95 backdrop-blur-md sm:bg-transparent
@@ -58,7 +58,7 @@ const Home = () => {
 			</div>
 
 			{/* Message Container */}
-			<div className='flex-1 pt-16 sm:pt-0 bg-gradient-to-br from-gray-50 to-gray-100 sm:bg-transparent'>
+			<div className='flex-1 w-full pt-16 sm:pt-0'>
 				<MessageContainer />
 			</div>
 		</div>

@@ -11,7 +11,6 @@ const Home = () => {
 
 	return (
 		<div className='flex h-screen sm:h-[450px] md:h-[550px] rounded-none sm:rounded-lg overflow-hidden bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0 p-1 sm:p-0 gap-1 sm:gap-0'>
-
 			{/* Mobile Sidebar Overlay */}
 			{isSidebarOpen && (
 				<div
@@ -25,16 +24,15 @@ const Home = () => {
 				${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} 
 				sm:translate-x-0 
 				fixed sm:relative 
-				top-1 sm:top-auto 
-				left-1 sm:left-auto 
+				top-0 sm:top-auto 
+				left-0 sm:left-auto 
 				h-full sm:h-auto 
 				w-80 sm:w-auto 
 				z-50 sm:z-auto 
 				transition-transform duration-300 ease-in-out
 				bg-gray-900/95 backdrop-blur-md sm:bg-transparent
-				rounded-lg sm:rounded-none
 			`}>
-				{/* Mobile Hamburger Menu on Sidebar */}
+				{/* Hamburger Menu on Sidebar Top */}
 				<div className='sm:hidden p-4 border-b border-gray-700'>
 					<button
 						onClick={toggleSidebar}
@@ -53,13 +51,13 @@ const Home = () => {
 						</div>
 					</button>
 				</div>
-				<div className='pt-0 sm:pt-0 h-full'>
+				<div className='h-full'>
 					<Sidebar />
 				</div>
 			</div>
 
 			{/* Message Container */}
-			<div className='flex-1 w-full bg-gray-900/95 backdrop-blur-md sm:bg-transparent rounded-lg sm:rounded-none'>
+			<div className='flex-1 w-full'>
 				<MessageContainer />
 			</div>
 		</div>

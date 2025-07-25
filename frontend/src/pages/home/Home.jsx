@@ -36,25 +36,11 @@ const Home = () => {
 			</div>
 
 			{/* Message Container */}
-			<div className='flex-1 w-full relative'>
-				{/* Mobile Hamburger Button - Inside Message Container */}
-				<button
-					onClick={toggleSidebar}
-					className='sm:hidden absolute top-4 left-4 z-10 p-2 rounded-md bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-colors border border-white/30'
-				>
-					<div className='w-6 h-6 flex flex-col justify-center items-center'>
-						<span className={`block w-5 h-0.5 bg-white transition-all duration-300 ${
-							isSidebarOpen ? 'rotate-45 translate-y-1' : '-translate-y-1'
-						}`}></span>
-						<span className={`block w-5 h-0.5 bg-white transition-all duration-300 ${
-							isSidebarOpen ? 'opacity-0' : 'opacity-100'
-						}`}></span>
-						<span className={`block w-5 h-0.5 bg-white transition-all duration-300 ${
-							isSidebarOpen ? '-rotate-45 -translate-y-1' : 'translate-y-1'
-						}`}></span>
-					</div>
-				</button>
-				<MessageContainer />
+			<div className='flex-1 w-full'>
+				<MessageContainer 
+					toggleSidebar={toggleSidebar}
+					isSidebarOpen={isSidebarOpen}
+				/>
 			</div>
 		</div>
 	);

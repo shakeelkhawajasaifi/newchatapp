@@ -38,7 +38,7 @@ const Home = () => {
 
 			{/* Sidebar */}
 			<div className={`
-				${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} 
+				${isSidebarOpen ? 'translate-x-0' : '-translate-x-64'} 
 				sm:translate-x-0 
 				fixed sm:relative 
 				top-0 sm:top-auto 
